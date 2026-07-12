@@ -1,9 +1,5 @@
 # 💰 Controle Financeiro
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,vscode,git,github" />
-</p>
-
 Sistema de controle financeiro desenvolvido em **Python** para gerenciamento de receitas, despesas, saldo e movimentações através do terminal.
 
 ---
@@ -20,13 +16,11 @@ Sistema de controle financeiro desenvolvido em **Python** para gerenciamento de 
 
 ---
 
-## 🚀 Tecnologias
+## 🛠️ Tecnologias
 
-<p>
-    <img src="https://skillicons.dev/icons?i=python,vscode,git,github" />
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=python,vscode,git,github" />
 </p>
-
----
 
 ## 📂 Estrutura do projeto
 
