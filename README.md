@@ -57,7 +57,7 @@ cd Controle_Financeiro
 Execute o projeto:
 
 ```bash
-python app.py
+python main.py
 ```
 
 ---
