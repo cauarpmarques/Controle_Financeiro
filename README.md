@@ -23,14 +23,11 @@ Sistema de controle financeiro desenvolvido em **Python** para gerenciamento de 
 </p>
 
 ## 📂 Estrutura do projeto
-
 ```text
-sistema_de_controle_financeiro_(CLI)/
+SISTEMA_DE_CONTROLE_FINANCEIRO_(CLI)/
 │
-├── main.py
+└── main.py
 ```
-
----
 
 ## ▶️ Como executar
 
@@ -43,7 +40,7 @@ git clone https://github.com/cauarpmarques/Controle_Financeiro.git
 Entre na pasta:
 
 ```bash
-cd Controle_Financeiro
+cd SISTEMA_DE_CONTROLE_FINANCEIRO_(CLI)
 ```
 
 Execute o projeto:
