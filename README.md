@@ -31,11 +31,9 @@ Sistema de controle financeiro desenvolvido em **Python** para gerenciamento de 
 ## 📂 Estrutura do projeto
 
 ```text
-Controle_Financeiro/
+sistema_de_controle_financeiro_(CLI)/
 │
-├── app.py
-├── README.md
-└── .gitignore
+├── main.py
 ```
 
 ---
