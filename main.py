@@ -263,9 +263,7 @@ def listar_movimentacoes():
     
     voltar_menu()
 
-#====================================
-#  Excluir movimentação
-#====================================
+
 def excluir_movimentacao():
 
     exibir_subtitulo("EXCLUIR MOVIMENTAÇÃO")
