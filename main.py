@@ -58,13 +58,13 @@ def exibir_nome_do_programa():
 def mostrar_menu():
     print("\nSelecione uma das opções abaixo:\n")
 
-    print("[1] ➕ Adicionar receita")
-    print("[2] ➖ Adicionar despesa")
-    print("[3] 📊 Ver saldo")
-    print("[4] 📝 Listar movimentações")
-    print("[5] ❌ Excluir movimentação")
-    print("[6] 📈 Resumo financeiro")
-    print("[7] 👋 Sair")
+    print("[1]  Adicionar receita")
+    print("[2]  Adicionar despesa")
+    print("[3]  Ver saldo")
+    print("[4]  Listar movimentações")
+    print("[5]  Excluir movimentação")
+    print("[6]  Resumo financeiro")
+    print("[7]  Sair")
 
 
 def exibir_subtitulo(texto):
@@ -76,9 +76,6 @@ def exibir_subtitulo(texto):
 def voltar_menu():
     input("\nPressione ENTER para voltar ao menu principal...")
 
-# ====================================
-# Escolher opção do menu
-# ====================================
 
 def processar_opcao():
 
@@ -113,11 +110,6 @@ def processar_opcao():
         opcao_invalida()
 
 
-
-# ====================================
-# Escolher descrição da receita
-# ====================================
-
 def escolher_descricao_receita():
 
     print("\nEscolha uma descrição:\n")
@@ -139,11 +131,6 @@ def escolher_descricao_receita():
         print("Digite apenas números!")
         return escolher_descricao_receita()
 
-
-
-# ====================================
-# Escolher descrição da despesa
-# ====================================
 
 def escolher_descricao_despesa():
 
@@ -167,32 +154,27 @@ def escolher_descricao_despesa():
         return escolher_descricao_despesa()
 
 
-
-# ====================================
-# Cadastrar receita
-# ====================================
-
 def adicionar_receita():
 
-    exibir_subtitulo("💵 ADICIONAR RECEITA")
+    exibir_subtitulo("ADICIONAR RECEITA")
 
     print("Cadastre uma nova entrada de dinheiro.")
     print("-" * 41)
 
     descricao = escolher_descricao_receita()
 
-    print(f"\n📝 Descrição: {descricao}")
+    print(f"\n Descrição: {descricao}")
 
     try:
-        valor = float(input("💰 Valor (R$): "))
+        valor = float(input(" Valor (R$): "))
 
         if valor <= 0:
-            print("❌ O valor precisa ser maior que zero.")
+            print("O valor precisa ser maior que zero.")
             voltar_menu()
             return
 
     except ValueError:
-        print("❌ Digite um valor válido.")
+        print(" Digite um valor válido.")
         voltar_menu()
         return
     
@@ -202,37 +184,33 @@ def adicionar_receita():
         "valor": valor
     })
 
-    print("\n✅ Receita cadastrada com sucesso!")
+    print("\nReceita cadastrada com sucesso!")
     
 
     voltar_menu()
 
 
-# ====================================
-# Cadastrar despesa
-# ====================================
-
 def adicionar_despesa():
 
-    exibir_subtitulo("💸 ADICIONAR DESPESA")
+    exibir_subtitulo("ADICIONAR DESPESA")
 
     print("Cadastre uma nova saída de dinheiro.")
     print("-" * 41)
 
     descricao = escolher_descricao_despesa()
 
-    print(f"\n📝 Descrição: {descricao}")
+    print(f"\nDescrição: {descricao}")
 
     try:
-        valor = float(input("💰 Valor (R$): "))
+        valor = float(input(" Valor (R$): "))
 
         if valor <= 0:
-            print("❌ O valor precisa ser maior que zero.")
+            print(" O valor precisa ser maior que zero.")
             voltar_menu()
             return
 
     except ValueError:
-        print("❌ Digite um valor válido.")
+        print("Digite um valor válido.")
         voltar_menu()
         return
 
@@ -242,18 +220,14 @@ def adicionar_despesa():
         "valor": valor
 })
 
-    print("\n✅ Despesa cadastrada com sucesso!")
+    print("\n Despesa cadastrada com sucesso!")
 
     voltar_menu()
 
 
-#====================================
-#  Mostra Saldo
-#====================================
-
 def mostrar_saldo():
 
-    exibir_subtitulo("📊 SALDO ATUAL")
+    exibir_subtitulo("SALDO ATUAL")
 
     saldo = 0
 
@@ -265,16 +239,13 @@ def mostrar_saldo():
         elif movimentacao["tipo"] == "despesa":
             saldo -= movimentacao["valor"]
 
-    print(f"💰 Seu saldo atual é: R$ {saldo:.2f}")
+    print(f"Seu saldo atual é: R$ {saldo:.2f}")
 
     voltar_menu()
 
-#====================================
-#  Movimentação na conta
-#====================================
 def listar_movimentacoes():
 
-    exibir_subtitulo("📝 HISTÓRICO DE MOVIMENTAÇÕES")
+    exibir_subtitulo("HISTÓRICO DE MOVIMENTAÇÕES")
 
     if len(movimentacoes) == 0:
         print("Nenhuma movimentação cadastrada.")
@@ -297,10 +268,10 @@ def listar_movimentacoes():
 #====================================
 def excluir_movimentacao():
 
-    exibir_subtitulo("❌ EXCLUIR MOVIMENTAÇÃO")
+    exibir_subtitulo("EXCLUIR MOVIMENTAÇÃO")
 
     if len(movimentacoes) == 0:
-        print("❌ Nenhuma movimentação cadastrada.")
+        print("Nenhuma movimentação cadastrada.")
         voltar_menu()
         return
 
@@ -318,27 +289,25 @@ def excluir_movimentacao():
 
             removida = movimentacoes.pop(escolha - 1)
 
-            print("\n✅ Movimentação excluída com sucesso!")
+            print("\n Movimentação excluída com sucesso!")
             print(f"Descrição: {removida['descricao']}")
             print(f"Valor: R$ {removida['valor']:.2f}")
 
         else:
-            print("\n❌ Número inválido!")
+            print("\n Número inválido!")
 
     except ValueError:
-        print("\n❌ Digite apenas números!")
+        print("\n Digite apenas números!")
 
     voltar_menu()
 
-#====================================
-#  Resumo financeiro
-#====================================
+
 def resumo_financeiro():
 
-    exibir_subtitulo("📈 RESUMO FINANCEIRO")
+    exibir_subtitulo(" RESUMO FINANCEIRO")
 
     if len(movimentacoes) == 0:
-        print("❌ Nenhuma movimentação cadastrada.")
+        print("Nenhuma movimentação cadastrada.")
         voltar_menu()
         return
 
@@ -359,36 +328,30 @@ def resumo_financeiro():
 
     saldo = total_receitas - total_despesas
 
-    print(f"💵 Total de receitas:      R$ {total_receitas:.2f}")
-    print(f"💸 Total de despesas:     R$ {total_despesas:.2f}")
+    print(f"Total de receitas:      R$ {total_receitas:.2f}")
+    print(f"Total de despesas:     R$ {total_despesas:.2f}")
     print("-" * 45)
-    print(f"💰 Saldo atual:           R$ {saldo:.2f}")
+    print(f"Saldo atual:           R$ {saldo:.2f}")
     print("-" * 45)
-    print(f"📥 Receitas cadastradas:  {quantidade_receitas}")
-    print(f"📤 Despesas cadastradas:  {quantidade_despesas}")
-    print(f"📋 Total de movimentações: {len(movimentacoes)}")
+    print(f" Receitas cadastradas:  {quantidade_receitas}")
+    print(f"Despesas cadastradas:  {quantidade_despesas}")
+    print(f"Total de movimentações: {len(movimentacoes)}")
 
     voltar_menu()
 
-#====================================
-#  fechar o programa
-#====================================
 
 def finalizar():
-    exibir_subtitulo("👋 Encerrando o sistema")
+    exibir_subtitulo("Encerrando o sistema")
 
     print("Obrigado por utilizar o nosso sistema de controle financeiro!")
     print("Até a próxima.\n")
 
     sys.exit()
 
-#====================================
-#  Opção invalida
-#====================================
 
 def opcao_invalida():
 
-    print("\n❌ Opção inválida!")
+    print("\nOpção inválida!")
     print("Escolha uma opção entre 1 e 7.")
 
     voltar_menu()
